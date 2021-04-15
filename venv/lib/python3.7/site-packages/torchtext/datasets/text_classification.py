@@ -103,8 +103,7 @@ class TextClassificationDataset(torch.utils.data.Dataset):
         return len(self._data)
 
     def __iter__(self):
-        for x in self._data:
-            yield x
+        yield from self._data
 
     def get_labels(self):
         return self._labels
